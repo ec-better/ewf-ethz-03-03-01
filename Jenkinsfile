@@ -19,7 +19,7 @@ pipeline {
     stage('Package & Dockerize') {
       steps {
         withMaven( maven: 'apache-maven-3.0.5' ) {
-            sh 'mvn -B deploy'
+            sh 'mvn -X -B deploy'
         }
       }
     }
