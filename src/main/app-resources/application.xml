@@ -2,7 +2,7 @@
   <jobTemplates>
     <jobTemplate id="notebook">
       <streamingExecutable>/application/notebook/run</streamingExecutable>
-      <defaultParameters/>
+      <defaultParameters><parameter id="from_date" title="Initial Date" abstract="Initial date of the temporal interval of interest with the format [YYYY-MM-DDThh:mm:ssZ]" maxOccurs="1" scope="runtime" type="LiteralData">2020-05-08T14:09:50Z</parameter><parameter id="to_date" title="Final Date" abstract="Final date of the temporal interval of interest with the format [YYYY-MM-DDThh:mm:ssZ]" maxOccurs="1" scope="runtime" type="LiteralData">2020-05-27T17:07:40Z</parameter></defaultParameters>
      <defaultJobconf>
         <property id="mapred.task.timeout">9900000000000</property>
       </defaultJobconf>
@@ -13,7 +13,7 @@
     <node id="notebook">
       <job id="notebook"/>
       <sources>
-        <source id="source" title="Input references" abstract="Input references" refid="string:list" scope="runtime"/>
+        <source id="source" title="Input references" abstract="Input references" refid="string:list" scope="runtime">http://sentinel-s2-l1c.s3-website.eu-central-1.amazonaws.com/tiles/29/S/QB/2016/10/24/0/</source>
       </sources>
     </node>
   </workflow>
