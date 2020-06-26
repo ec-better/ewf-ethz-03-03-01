@@ -1,0 +1,13 @@
+*~
+*.tif
+*.tif.properties
+*.csv
+*.csv.properties
+*.zip
+*.zip.properties
+*.hdf
+*.h5
+.ipynb_checkpoints
+*.pyc
+*checkpoint.py
+*checkpoint.ipynb
